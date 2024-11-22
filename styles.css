@@ -1,0 +1,194 @@
+:root {
+    /* Definição de variáveis globais para cores, fontes e estilos reutilizáveis */
+    --branco-principal: #FFFFFF; 
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7; 
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter'; 
+    --botao-azul-efeito: #3c92fa; /
+}
+
+body {
+    /* Estilos gerais para o corpo da página */
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal); 
+    font-family: var(--fonte-principal); 
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    /* Reset de margens e espaçamentos padrão para todos os elementos */
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    /* Configurações de fundo e alinhamento para a seção principal */
+    background-image: url("img/Background.png"); /* Define a imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem de fundo */
+    background-size: contain; /* Faz a imagem caber no container sem cortar */
+    align-items: center; /* Alinha itens ao centro (não funcional sem display: flex) */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.container {
+    /* Configurações para o layout da página */
+    height: 100vh; /* Altura igual à janela do navegador */
+    display: grid; /* Ativa o layout em grade */
+    grid-template-columns: 50% 50%; /* Divide em duas colunas iguais */
+}
+
+.container__botao {
+    /* Estilo para botões no container */
+    background-color: var(--botao-azul);
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 1em; /* Espaçamento interno */
+    color: var(--branco-principal);
+    display: block; /* O botão ocupa uma linha inteira */
+    text-decoration: none; /* Remove o sublinhado de links */
+    margin-bottom: 1em; /* Adiciona espaçamento inferior */
+}
+
+.botao_secundario {
+    /* Estilo para botões secundários */
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    /* Estilo para avisos no container */
+    font-size: 12px; /* Texto menor */
+    color: var(--cinza-secundario); /* Texto em cinza secundário */
+}
+
+.container__titulo {
+    /* Estilo para títulos no container */
+    font-size: 28px; /* Texto grande */
+    font-weight: 700; /* Texto em negrito */
+}
+
+.container__imagem {
+    /* Estilo para imagens no container */
+    margin: 1em 0 2em 0; /* Espaçamentos verticais */
+}
+
+.container__caixa {
+    /* Caixa com margens laterais */
+    margin: 0 6em; /* Margens de 6em apenas nas laterais */
+}
+
+.secundario__imagem {
+    /* Estilo para imagens secundárias */
+    width: 80%; /* Largura ajustada a 80% do container pai */
+}
+
+.secundario {
+    /* Estilo para seções secundárias */
+    align-items: center; /* Centraliza os itens (não funcional sem display: flex) */
+    margin: 0 10em; /* Margens laterais */
+}
+
+.descricao__titulo {
+    /* Estilo para o título da descrição */
+    font-weight: 700; /* Negrito */
+    font-size: 48px; /* Texto grande */
+    color: var(--branco-principal); /* Cor branca */
+    margin-bottom: 0.1em; /* Pequeno espaçamento inferior */
+}
+
+.descricao__texto {
+    /* Estilo para o texto da descrição */
+    color: var(--cinza-secundario); /* Cor cinza */
+}
+
+.secundario__botao {
+    /* Estilo para botões secundários */
+    display: inline-block; /* Exibe o botão em linha */
+    margin-top: 1em; /* Espaçamento superior */
+}
+
+.container__descricao {
+    /* Espaçamento para a descrição do container */
+    padding: 2em; /* Preenchimento interno uniforme */
+}
+
+.dispositivos__lista {
+    /* Lista de dispositivos */
+    display: flex; /* Exibe os itens como flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 5em 0; /* Espaçamentos verticais */
+}
+
+.dispositivos {
+    /* Estilo para a seção de dispositivos */
+    text-align: center; /* Centraliza o texto */
+}
+
+.dispositivos__titulo {
+    /* Estilo para o título dos dispositivos */
+    font-size: 48px; /* Texto grande */
+    color: var(var(--branco-principal)); /* Cor branca */
+}
+
+.lista__item {
+    /* Estilo para itens da lista */
+    font-size: 32px; /* Texto grande */
+    color: var(var(--branco-principal)); /* Cor branca */
+}
+
+.rodape {
+
+    text-align: center; /* Centraliza o texto */
+}
+
+.rodape__logo {
+
+    margin: 5em 0; /* Margens verticais */
+}
+
+.rodape__lista {
+
+    display: flex; /* Flexbox para itens */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 2em; /* Preenchimento interno */
+}
+
+.lista__link {
+    /* Estilo para links na lista */
+    margin: 0 1em; /* Margens horizontais */
+}
+
+.lista__link a {
+    /* Estilo para os links propriamente ditos */
+    color: var(--branco-principal); 
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px;
+    padding: 0.5em 1em; /* Preenchimento interno */
+    transition: color 0.3s ease; /* Transição suave na cor ao interagir */
+}
+
+.lista__link a:hover {
+
+    color: #007BFF; 
+}
+
+.lista__link a:active {
+    /* Estilo ao clicar no link */
+    color: purple;
+}
+
+.rodape__texto {
+
+    color: var(--cinza-secundario); 
+    font-size: 14px; 
+    padding: 1em; /* Preenchimento interno */
+}
+
+.container__botao:hover {
+    /* Estilo para o botão ao passar o mouse */
+    background-color: var(--botao-azul-efeito); 
+    color: var(--cor-de-fundo); 
+}
